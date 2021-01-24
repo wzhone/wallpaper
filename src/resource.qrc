@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/logo">
+        <file>resource/img/logo.png</file>
+        <file>resource/img/logo.svg</file>
+    </qresource>
+    <qresource prefix="/inbg">
+        <file>resource/bg-img/bg.jpg</file>
+        <file>resource/bg-img/bg2.png</file>
+    </qresource>
+</RCC>

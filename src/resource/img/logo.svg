@@ -1,0 +1,29 @@
+<svg width="74" height="85" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <defs>
+        <symbol id="svg_13" height="100" width="100" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg">
+            <g>
+                <polygon points="0.4,13.7 10.6,19.7 33.6,6.4 23.4,0.5 " fill-rule="evenodd" clip-rule="evenodd" fill="#297855" class="logosvg logoside logob_6"/>
+                <polygon points="0.4,40.3 10.6,34.4 10.6,7.8 0.4,13.7 " fill-rule="evenodd" clip-rule="evenodd" fill="#BED42A" class="logosvg logoside logob_5"/>
+                <polygon points="23.4,53.6 23.4,41.8 0.4,28.5 0.4,40.3 " fill-rule="evenodd" clip-rule="evenodd" fill="#9CC935" class="logosvg logoside logob_4"/>
+                <polygon points="46.4,40.3 36.2,34.4 13.2,47.7 23.4,53.6 " fill-rule="evenodd" clip-rule="evenodd" fill="#6AB82D" class="logosvg logoside logob_3"/>
+                <polygon points="46.4,13.7 36.2,19.7 36.2,46.2 46.4,40.3 " fill-rule="evenodd" clip-rule="evenodd" fill="#4EAF54" class="logosvg logoside logob_2"/>
+                <polygon points="23.4,0.5 23.4,12.3 46.4,25.6 46.4,13.7 " fill-rule="evenodd" clip-rule="evenodd" fill="#24905E" class="logosvg logoside logob_1"/>
+
+                <polygon points="0.4,13.7 10.6,19.7 10.6,7.8 " fill-rule="evenodd" clip-rule="evenodd" fill="#256A35" class="logosvg logoangle logoj_6"/>
+                <polygon points="0.4,40.3 10.6,34.4 10.6,34.4 0.4,28.5 " fill-rule="evenodd" clip-rule="evenodd" fill="#7DB828" class="logosvg logoangle logoj_5"/>
+                <polygon points="23.4,53.6 23.4,41.8 23.4,41.8 13.2,47.7 " fill-rule="evenodd" clip-rule="evenodd" fill="#46A536" class="logosvg logoangle logoj_4"/>
+                <polygon points="36.2,34.4 36.2,46.2 46.4,40.3 " fill-rule="evenodd" clip-rule="evenodd" fill="#2A8C3A" class="logosvg logoangle logoj_3"/>
+                <polygon points="36.2,19.7 46.4,25.6 46.4,13.7 36.2,19.7 " fill-rule="evenodd" clip-rule="evenodd" fill="#146836" class="logosvg logoangle logoj_2"/>
+                <polygon points="23.4,0.5 23.4,12.3 23.4,12.3 33.6,6.4 " fill-rule="evenodd" clip-rule="evenodd" fill="#054726" class="logosvg logoangle logoj_1"/>
+            </g>
+        </symbol>
+    </defs>
+    <g class="layer">
+        <use x="-0.33371" y="-0.44495" transform="matrix(1.6,0,0,1.6,0,0) " xlink:href="#svg_13" id="svg_14"/>
+        <g transform="matrix(1.6,0,0,1.6,0,0) " id="svg_15"/>
+        <polygon transform="matrix(1.6,0,0,1.6,0,0) " strokeWidth="1" strokecolor="#000000" fill="#FF0000" edge="0" orient="x" sides="5" shape="regularPoly" id="svg_17" cy="12.06616" cx="15.90955"/>
+        <polygon transform="matrix(1.6,0,0,1.6,0,0) " strokeWidth="1" strokecolor="none" fill="#FF0000" edge="0" orient="x" sides="5" shape="regularPoly" id="svg_18" cy="18.82935" cx="21.2489"/>
+        <polygon transform="matrix(1.6,0,0,1.6,0,0) " strokeWidth="1" strokecolor="none" fill="#FF0000" edge="0" orient="x" sides="5" shape="regularPoly" id="svg_19" cy="23.63477" cx="-18.61829"/>
+    </g>
+</svg>
