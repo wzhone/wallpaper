@@ -6,16 +6,14 @@
 #include <tchar.h>
 #include <string>
 
-
 class UnderExplore;
 
 namespace Ui {
 class Wallpaper;
 }
 
-
-class Wallpaper : public QWidget
-{
+//桌面壁纸类
+class Wallpaper : public QWidget{
     Q_OBJECT
 
 public:
@@ -35,9 +33,33 @@ private:
 
 };
 
+class WallaperManager: public QWidget{
+    Q_OBJECT
 
-class UnderExplorer
-{
+public:
+    ~WallaperManager(){}
+    static WallaperManager* instance();
+
+    void destory();
+    Wallpaper** wallpapers(){ return _wallWindow; }
+    int countWallpaper(){ return _nWindow; }
+    bool init();
+
+    bool getVisible(){return this->show;}
+    void setVisible(bool);
+    void triggerVisible();
+
+private:
+
+    bool show = true;
+    Wallpaper** _wallWindow; //窗口数组
+    int _nWindow = 0;    //屏幕数量
+    WallaperManager();
+};
+
+
+//这个类主要是把窗口放置到桌面图标底下
+class UnderExplorer{
 public:
 
     static bool init();

@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui webenginecore
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -27,20 +27,19 @@ SOURCES += \
         effect.cpp \
         main.cpp \
         mainoperate.cpp \
-        lowermenu.cpp \
+        tray.cpp \
         wallpaper.cpp \
         hotkey.cpp
 
 HEADERS += \
         effect.h \
         mainoperate.h \
-        lowermenu.h \
+        tray.h \
         wallpaper.h \
         hotkey.h
 
 FORMS += \
         mainoperate.ui \
-        lowermenu.ui \
         wallpaper.ui
 
 
@@ -49,4 +48,4 @@ LIBS += -lUser32
 RESOURCES += \
     resource.qrc
 
-QMAKE_CXXFLAGS  +=  /std:c++14
+QMAKE_CXXFLAGS  +=  /std:c++17

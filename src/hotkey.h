@@ -27,7 +27,7 @@ class HotKey : public QObject
     Q_OBJECT
 
 public:
-    static HotKey *getInstance();
+    static HotKey *instance();
 
     int init();
 

@@ -28,9 +28,9 @@
    <widget class="QFrame" name="menuFrame">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>-1</x>
       <y>0</y>
-      <width>200</width>
+      <width>201</width>
       <height>410</height>
      </rect>
     </property>
@@ -54,10 +54,10 @@
     <widget class="QWidget" name="verticalLayoutWidget">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>181</width>
-       <height>391</height>
+       <x>0</x>
+       <y>0</y>
+       <width>201</width>
+       <height>411</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -81,7 +81,11 @@
          </font>
         </property>
         <property name="text">
-         <string>壁纸设置</string>
+         <string> 素材库</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/resource/icon/shop.svg</normaloff>:/resource/icon/shop.svg</iconset>
         </property>
        </widget>
       </item>
@@ -209,10 +213,10 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>10</y>
-      <width>561</width>
-      <height>391</height>
+      <x>200</x>
+      <y>0</y>
+      <width>591</width>
+      <height>411</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -258,6 +262,8 @@
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

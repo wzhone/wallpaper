@@ -5,15 +5,14 @@ HotKey* HotKey::HKI = nullptr;
 
 HotKey::HotKey(){}
 
-HotKey* HotKey::getInstance(){
+HotKey* HotKey::instance(){
     if (HKI==nullptr)
         HKI = new HotKey();
     return HKI;
 }
 
-LRESULT CALLBACK HotKey::kb_proc(int code, WPARAM w, LPARAM l)
-{
-    HotKey* that = HotKey::getInstance();
+LRESULT CALLBACK HotKey::kb_proc(int code, WPARAM w, LPARAM l){
+    HotKey* that = HotKey::instance();
     PKBDLLHOOKSTRUCT p = reinterpret_cast<PKBDLLHOOKSTRUCT>(l);
 
     /*
@@ -76,13 +75,13 @@ int HotKey::init(){
 
 int HotKey::callback(){
 
-    if (s_ctrl && s_alt){
-        if (MainInst->isVisible()) {
-            MainInst->hide();
-        }else{
-            MainInst->show();
-        }
-    }
+//    if (s_ctrl && s_alt){
+//        if (MainInst->isVisible()) {
+//            MainInst->hide();
+//        }else{
+//            MainInst->show();
+//        }
+//    }
 
     return 0;
 }

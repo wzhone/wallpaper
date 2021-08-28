@@ -7,4 +7,7 @@
         <file>resource/bg-img/bg.jpg</file>
         <file>resource/bg-img/bg2.png</file>
     </qresource>
+    <qresource prefix="/">
+        <file>resource/icon/shop.svg</file>
+    </qresource>
 </RCC>

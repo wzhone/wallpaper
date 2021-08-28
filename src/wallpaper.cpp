@@ -1,5 +1,7 @@
 ﻿#include "wallpaper.h"
 #include "ui_wallpaper.h"
+#include <QMessageBox>
+#include <QScreen>
 
 Wallpaper::Wallpaper(QWidget *parent) :
     QWidget(parent),
@@ -74,9 +76,8 @@ bool UnderExplorer::init(){
     EnumWindows(&UnderExplorer::EnumWindowsProc,0);
     return true;
 }
-BOOL CALLBACK UnderExplorer::EnumWindowsProc(HWND hwnd,LPARAM lParam)
-{
-    lParam = 0;//消除警告
+BOOL CALLBACK UnderExplorer::EnumWindowsProc(HWND hwnd,LPARAM){
+
     char window_class_name[256]={0};
     GetClassNameA(hwnd, window_class_name, sizeof(window_class_name));//获取窗口类名
 
@@ -106,3 +107,66 @@ bool UnderExplorer::refresh(){
     ShowWindow(UnderExplorer::MiddleW,SW_SHOW);
     return true;
 }
+
+//=========================================================================
+
+WallaperManager *WallaperManager::instance(){
+    static WallaperManager* _inst = new WallaperManager;
+    return _inst;
+}
+
+void WallaperManager::destory(){
+    for(int i=0;i<_nWindow;i++){
+        Wallpaper* window = this->_wallWindow[i];
+        if (window!=nullptr){
+            window->hide();
+        }
+    }
+}
+
+bool WallaperManager::init(){
+    if (!UnderExplorer::init()){
+        QMessageBox::warning(0,"初始化错误","桌面壁纸初始化失败！");
+        return false;
+    }
+
+    //检测显示屏数
+    QList<QScreen*> screen_list= QGuiApplication::screens();
+    this->_nWindow = screen_list.count();
+
+    //初始化壁纸
+    this->_wallWindow=new Wallpaper*[this->_nWindow];
+
+    for(int i=0;i<_nWindow;i++){
+
+        this->_wallWindow[i] = new Wallpaper();
+        Wallpaper* window = this->_wallWindow[i];
+
+        window->display(":/inbg/resource/bg-img/bg.jpg");//设置默认图片
+
+        window->setGeometry(screen_list[i]->geometry());//设置位置和大小
+        UnderExplorer::put(window->winId());//下潜
+    }
+
+    for(int i=0;i<_nWindow;i++){
+        this->_wallWindow[i]->show();
+    }
+    return true;
+}
+
+void WallaperManager::setVisible(bool v){
+    this->show = v;
+    for(int i=0;i<_nWindow;i++){
+        if (show){
+            this->_wallWindow[i]->show();
+        }else{
+            this->_wallWindow[i]->hide();
+        }
+    }
+}
+
+void WallaperManager::triggerVisible(){
+    this->setVisible(!show);
+}
+
+WallaperManager::WallaperManager(){}
